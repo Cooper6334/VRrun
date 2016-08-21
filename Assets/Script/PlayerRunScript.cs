@@ -123,14 +123,12 @@ public class PlayerRunScript : MonoBehaviour
         }
 
         bool isTrigger = leftTrigger || rightTrigger;
-        print("is trigger " + isTrigger);
         if (!isTrigger)
         {
             runDirection = head.transform.forward;
         }
         myRigidbody.velocity = new Vector3(runDirection.x * speed, 0, runDirection.z * speed);
     }
-    public bool isTrigger;
 
     void OnCollisionEnter(Collision collision)
     {
